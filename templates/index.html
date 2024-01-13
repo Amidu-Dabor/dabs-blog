@@ -1,0 +1,36 @@
+{% extends 'component_templates/base.html' %}
+
+<!-- Page Title -->
+{% block title %} Home {% endblock %}
+
+<!-- Head contents -->
+{% block head %}
+    {{ super() }}
+{% endblock %}
+
+<!-- Navigation Bar -->
+{% block navbar %}
+    {{ super() }}
+{% endblock %}
+
+<!-- Page Header -->
+{% block header %}
+<header class="masthead" style="background-image: url('{{ url_for('static', filename='assets/img/home-bg.jpg') }}">
+    {% include 'component_templates/header.html' %}
+</header>
+{% endblock %}
+
+<!-- Main Contents -->
+{% block content %}
+<div class="container px-4 px-lg-5">
+    {% include 'component_templates/main-content.html' %}
+</div>
+{% endblock %}
+
+<!-- Page Footer -->
+{% block footer %}
+    {{ super() }}
+{% endblock %}
+
+<!-- Bootstrap core and Core Theme JS-->
+{% include 'script_links.html' %}

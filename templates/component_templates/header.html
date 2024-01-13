@@ -1,0 +1,21 @@
+<div class="container position-relative px-4 px-lg-5">
+    <div class="row gx-4 gx-lg-5 justify-content-center">
+        <div class="col-md-10 col-lg-8 col-xl-7">
+            <div class="site-heading">
+
+                {% with messages = get_flashed_messages() %}
+                    {% if messages %}
+                        {% for message in messages %}
+                            <h1>{{ message }}</h1>
+                        {% endfor %}
+                    {% else %}
+                        <h1>My Blog</h1>
+                    {% endif %}
+                {% endwith %}
+
+
+                <span class="subheading">A Blog Theme by Start Bootstrap</span>
+            </div>
+        </div>
+    </div>
+</div>
